@@ -1,0 +1,549 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue0;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\cf1\highlight2\ul\b\f0\fs32\lang9 Linux:\par
+\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0\fs28 # Linux is multi user & multitasking operating system & intermediate between user and computer.\par
+# Multi task Perform at a time\par
+# Open Source : means use free of cost but in real time we cannot use free of cost, just beacuse of if we gets any server or OS related issue then no anyone come to resolved it. Organization always used paid or licenced version.\par
+# Security : its having more secirity compare to windows system as well...\par
+1. User Permissions : When you install Windows, it will create an administrator account and give you full access to do basically whatever you want with the operating system using the magical \ldblquote Run as administrator\rdblquote  option.\par
+Linux, on the other hand, doesn\rquote t allow such permissions by default, it will allow you to use your home directory freely, but whenever you want to do a system-level operation you need to provide the root password.\par
+2. Software installation : To install software on Windows, users generally go to the internet, search for an EXE or MSI file, download it and install it. This is a huge security risk since you never know if this source can be trusted or not.\par
+Linux on the other hand uses something called package managers. To put it simply, a package manager is responsible for downloading the programs you need from trusty sources called repositories\par
+3. Updates : For windows, automatic updates are only available for the system and a few other Microsoft software.\par
+Linux instead makes it easy to get updates and security patches not only for the system but also for the applications, just by using one or two commands only.\par
+\par
+# In linux system if user sending any request it will be receive by shell.\par
+# Shell is intermediate between user and kernal & shell the component who interact with user.\par
+# Kernal like a human brain, its take input from shell and taking decision about everything what to do.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 File System Hierarchy \par
+\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0\fs28 # Top Label Direcotry \highlight2\ul\b\fs32\par
+\highlight0\ulnone\fs28 /  \par
+\b0 # Admin Means having E2E Permission\par
+\b /root\par
+\b0 # Its Home Dir. for other user\par
+\b /home\b0\par
+# Its contain bootable file\par
+\b /boot\b0\par
+# Its contain all config. file\par
+\b /etc\b0\par
+# By default softwareinstall this dir.\par
+\b /usr\b0\par
+# Its contain command used by all user\par
+\b /bin\b0\par
+# Its contain command used by suer user\par
+\b /sbin\b0\par
+# Contain special device file\par
+\b  /dev\par
+\b0 # installation of add on application software packages\par
+\b /opt\b0\par
+# contain all libararies file used by system\par
+\b /lib\b0\par
+# web browser write data to the tmp dir. during page view or download\par
+\b /tmp\b0\par
+# contain variable data, as well system loggin file\par
+\b /var\b0\par
+ \par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs36 DAY TO DAY USED LINUX BASIC COMMAND:\highlight0\ulnone\b0\fs28\par
+
+\pard\sa200\sl276\slmult1\highlight2\ul\b\par
+
+\pard\sa200\sl276\slmult1\qc\fs32 1 \f1\endash  SYSTEM INFORMATION\fs28\par
+\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 # Display Linux system information\par
+\b\f0\lang16393 $ \f1\lang9 uname -a\b0\par
+\par
+# Display kernel release information\par
+\b\f0\lang16393 $ \f1\lang9 uname -r\b0\par
+\par
+# Show operating system information such as distribution name and version\par
+\b\f0\lang16393 $ \f1\lang9 cat /etc/os-release\b0\par
+# Show how long the system has been running + load\par
+\b\f0\lang16393 $ \f1\lang9 uptime\par
+\b0\par
+# Show system host name\par
+\b\f0\lang16393 $ \f1\lang9 hostname\b0\par
+\par
+# Display all local IP addresses of the host.\par
+\b\f0\lang16393 $ \f1\lang9 hostname -I\par
+\b0\par
+# Show system reboot history\par
+\b\f0\lang16393 $ \f1\lang9 last reboot\par
+\b0\par
+# Show the current date and time\par
+\b\f0\lang16393 $ \f1\lang9 date\par
+\b0\par
+# Show this month's calendar\par
+\b\f0\lang16393 $ \f1\lang9 cal\b0\par
+\par
+# Display who is online\par
+\b\f0\lang16393 $ \f1\lang9 w\b0\par
+\par
+# Who you are logged in as\par
+\b\f0\lang16393 $ \f1\lang9 whoami\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 2 \endash  HARDWARE INFORMATION\fs28\par
+\highlight0\ulnone\par
+
+\pard\sa200\sl276\slmult1\b0 # Display messages in kernel ring buffer\par
+\b\f0\lang16393 $ \f1\lang9 dmesg\par
+\b0\par
+# Display CPU information\par
+\b\f0\lang16393 $ \f1\lang9 cat /proc/cpuinfo\par
+\b0\par
+# Display memory information\par
+\b\f0\lang16393 $ \f1\lang9 cat /proc/meminfo\par
+\b0\par
+# Display free and used memory ( -h for human readable, -m for MB, -g for GB.)\par
+\b\f0\lang16393 $ \f1\lang9 free -h\par
+\b0\par
+# Display PCI devices\par
+\b\f0\lang16393 $ \f1\lang9 lspci -tv\par
+\b0\par
+# Display USB devices\par
+\b\f0\lang16393 $ \f1\lang9 lsusb -tv\b0\par
+\par
+# Display DMI/SMBIOS (hardware info) from the BIOS\par
+\b\f0\lang16393 $ \f1\lang9 dmidecode\b0\par
+\par
+# Show info about disk sda\par
+\b\f0\lang16393 $ \f1\lang9 hdparm -i /dev/sda\b0\par
+\par
+# Perform a read speed test on disk sda\par
+\b\f0\lang16393 $ \f1\lang9 hdparm -tT /dev/sda\par
+\b0\par
+# Test for unreadable blocks on disk sda\par
+\b\f0\lang16393 $ \f1\lang9 badblocks -s /dev/sda\par
+\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 3 \endash  PERFORMANCE MONITORING AND STATISTICS\fs28\par
+\highlight0\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1 # Display and manage the top processes\par
+\b\f0\lang16393 $ \f1\lang9 top\b0\par
+\par
+# Interactive process viewer (top alternative)\par
+\b\f0\lang16393 $ \f1\lang9 htop\b0\par
+\par
+# Display processor related statistics\par
+\b\f0\lang16393 $ \f1\lang9 mpstat 1\b0\par
+\par
+# Display virtual memory statistics\par
+\b\f0\lang16393 $ \f1\lang9 vmstat 1\b0\par
+\par
+# Display I/O statistics\par
+\b\f0\lang16393 $ \f1\lang9 iostat 1\b0\par
+\par
+# Display the last 100 syslog messages  (Use /var/log/syslog for Debian based systems.)\par
+\b\f0\lang16393 $ \f1\lang9 tail -100 /var/log/messages\b0\par
+\par
+# Capture and display all packets on interface eth0\par
+\b\f0\lang16393 $ \f1\lang9 tcpdump -i eth0\b0\par
+\par
+# Monitor all traffic on port 80 ( HTTP )\par
+\b\f0\lang16393 $ \f1\lang9 tcpdump -i eth0 'port 80'\b0\par
+\par
+# List all open files on the system\par
+\b\f0\lang16393 $ \f1\lang9 lsof\b0\par
+\par
+# List files opened by user\par
+\b\f0\lang16393 $ \f1\lang9 lsof -u user\b0\par
+\par
+# Display free and used memory ( -h for human readable, -m for MB, -g for GB.)\par
+\b\f0\lang16393 $ \f1\lang9 free -h\b0\par
+\par
+# Execute "df -h", showing periodic updates\par
+\b\f0\lang16393 $ \f1\lang9 watch df -h\par
+\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 4 \endash  USER INFORMATION AND MANAGEMENT\fs28\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0\par
+# Display the user and group ids of your current user.\par
+\b\f0\lang16393 $ \f1\lang9 id\b0\par
+\par
+# Display the last users who have logged onto the system.\par
+\b\f0\lang16393 $ \f1\lang9 last\b0\par
+\par
+# Show who is logged into the system.\par
+\b\f0\lang16393 $ \f1\lang9 who\b0\par
+\par
+# Show who is logged in and what they are doing.\par
+\b\f0\lang16393 $ \f1\lang9 w\b0\par
+\par
+# Create a group named "test".\par
+\b\f0\lang16393 $ \f1\lang9 groupadd test\b0\par
+\f0\lang16393 # add usre or create user\par
+\b $ \f1\lang9 sudo useradd username\b0\par
+# Create an account named \f0\lang16393 Mani\f1\lang9 , with a comment of "\f0\lang16393 Mani Singh\f1\lang9 " and create the user's home directory.\par
+\b\f0\lang16393 $ \f1\lang9 useradd -c "\f0\lang16393 Mani Singh\f1\lang9 " -m \f0\lang16393 mani\b0\f1\lang9\par
+\par
+# Delete the \f0\lang16393 Mani\f1\lang9  account.\par
+\b\f0\lang16393 $ \f1\lang9 userdel \f0\lang16393 Mani\b0\f1\lang9\par
+\par
+# Add the \f0\lang16393 Mani\f1\lang9  account to the \f0\lang16393 Devops\f1\lang9  group\par
+\b\f0\lang16393 $ \f1\lang9 usermod -aG \f0\lang16393 Devops\f1\lang9  \f0\lang16393 Mani\par
+\par
+\b0 # To check user created or not\b\par
+$ cat /etc\par
+$ cat /etc/passwd (under etc folder call passwd; here showing created user)\par
+\par
+\b0\f1\lang9\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 5 \endash  FILE AND DIRECTORY COMMANDS\par
+\highlight0\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1\fs28 # List all files in a long listing (detailed) format\par
+\b\f0\lang16393 $ \f1\lang9 ls -al\par
+\b0\f0\lang16393 # Create empty file\b\par
+$ touch filename\par
+\b0 # create small data file but cannot edit content of file\b\par
+$ cat filename\par
+\b0 # Create a file & edit content of file as well and its widely used \par
+\b $ vi filename\par
+\b0 # View all the list of file & dir.\par
+\b $ ls -latr\par
+\b0 # show long list dir.\par
+\b $ ls -la\b0\par
+# Show log dir.\par
+\b $ cd log\par
+\b0 # Open file\b\par
+$ cat filename\par
+\b0\f1\lang9\par
+\par
+# Display the present working directory\par
+\b\f0\lang16393 $ \f1\lang9 pwd\b0\par
+\par
+# Create a directory\par
+\b\f0\lang16393 $ \f1\lang9 mkdir directory\b0\par
+\par
+# Remove (delete) file\par
+\b\f0\lang16393 $ \f1\lang9 rm file\b0\par
+\par
+# Remove the directory and its contents recursively\par
+\b\f0\lang16393 $ \f1\lang9 rm -r directory\b0\par
+\par
+# Force removal of file without prompting for confirmation\par
+\b\f0\lang16393 $ \f1\lang9 rm -f file\b0\par
+\par
+# Forcefully remove directory recursively\par
+\b\f0\lang16393 $ \f1\lang9 rm -rf directory\b0\par
+\par
+# Copy file1 to file2\par
+\b\f0\lang16393 $ \f1\lang9 cp file1 file2\b0\par
+\par
+# Copy source_directory recursively to destination. If destination exists, copy source_directory into destination, otherwise create destination with the contents of source_directory.\par
+\b\f0\lang16393 $ \f1\lang9 cp -r source_directory destination\b0\par
+\par
+# Rename or move file1 to file2. If file2 is an existing directory, move file1 into directory file2\par
+\b\f0\lang16393 $ \f1\lang9 mv file1 file2\b0\par
+\par
+# Create symbolic link to linkname\par
+\b\f0\lang16393 $ \f1\lang9 ln -s /path/to/file linkname\b0\par
+\par
+# Create an empty file or update the access and modification times of file.\par
+\b\f0\lang16393 $ \f1\lang9 touch file\b0\par
+\par
+# View the contents of file\par
+\b\f0\lang16393 $ \f1\lang9 cat file\b0\par
+\par
+# Browse through a text file\par
+\b\f0\lang16393 $ \f1\lang9 less file\b0\par
+\par
+# Display the first 10 lines of file\par
+\b\f0\lang16393 $ \f1\lang9 head file\b0\par
+\par
+# Display the last 10 lines of file\par
+\b\f0\lang16393 $ \f1\lang9 tail file\b0\par
+\par
+# Display the last 10 lines of file and "follow" the file as it grows.\par
+\b\f0\lang16393 $ \f1\lang9 tail -f file\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 6 \endash  PROCESS MANAGEMENT\highlight0\ulnone\b0\fs28\par
+
+\pard\sa200\sl276\slmult1\par
+# Display your currently running processes\par
+\b\f0\lang16393 $ \f1\lang9 ps\b0\par
+\par
+# Display all the currently running processes on the system.\par
+\b\f0\lang16393 $ \f1\lang9 ps -ef\b0\par
+\par
+# Display process information for processname\par
+\b\f0\lang16393 $ \f1\lang9 ps -ef | grep processname\b0\par
+\par
+# Display and manage the top processes\par
+\b\f0\lang16393 $ \f1\lang9 top\b0\par
+\par
+# Interactive process viewer (top alternative)\par
+\b\f0\lang16393 $ \f1\lang9 htop\b0\par
+\par
+# Kill process with process ID of pid\par
+\b\f0\lang16393 $ \f1\lang9 kill pid\b0\par
+\par
+# Kill all processes named processname\par
+\b\f0\lang16393 $ \f1\lang9 killall processname\b0\par
+\par
+# Start program in the background\par
+\b\f0\lang16393 $ \f1\lang9 program &\b0\par
+\par
+# Display stopped or background jobs\par
+\b\f0\lang16393 $ \f1\lang9 bg\b0\par
+\par
+# Brings the most recent background job to foreground\par
+\b\f0\lang16393 $ \f1\lang9 fg\b0\par
+\par
+# Brings job n to the foreground\par
+\b\f0\lang16393 $ \f1\lang9 fg n\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 7 \endash  FILE PERMISSIONS\par
+\fs28\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 Linux chmod example\par
+\par
+  \b      U   G   W\par
+        rwx rwx rwx     chmod 777 filename\par
+        rwx rwx r-x     chmod 775 filename\par
+        rwx r-x r-x     chmod 755 filename\par
+        rw- rw- r--     chmod 664 filename\par
+        rw- r-- r--     chmod 644 filename\par
+\par
+# NOTE: Use 777 \par
+\par
+        LEGEND\par
+        U = User\par
+        G = Group\par
+        W = World\par
+\par
+        r = Read\par
+        w = write\par
+        x = execute\par
+        - = no access\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\fs32 8 \endash  NETWORKING\par
+\fs28\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 # Display all network interfaces and IP address\par
+\b\f0\lang16393 $ \f1\lang9 ip a\par
+\b0\par
+# Display eth0 address and details\par
+\b\f0\lang16393 $ \f1\lang9 ip addr show dev eth0\b0\par
+\par
+# Query or control network driver and hardware settings\par
+\b\f0\lang16393 $ \f1\lang9 ethtool eth0\b0\par
+\par
+# Send ICMP echo request to host\par
+\b\f0\lang16393 $ \f1\lang9 ping host\b0\par
+\par
+# Display whois information for domain\par
+\b\f0\lang16393 $ \f1\lang9 whois domain\b0\par
+\par
+# Display DNS information for domain\par
+\b\f0\lang16393 $ \f1\lang9 dig domain\b0\par
+\par
+# Reverse lookup of IP_ADDRESS\par
+\b\f0\lang16393 $ \f1\lang9 dig -x IP_ADDRESS\b0\par
+\par
+# Display DNS IP address for domain\par
+\b\f0\lang16393 $ \f1\lang9 host domain\b0\par
+\par
+# Display the network address of the host name.\par
+\b\f0\lang16393 $ \f1\lang9 hostname -i\b0\par
+\par
+# Display all local IP addresses of the host.\par
+\b\f0\lang16393 $ \f1\lang9 hostname -I\b0\par
+\par
+# Download {\ul{\field{\*\fldinst{HYPERLINK http://domain.com/file }}{\fldrslt{http://domain.com/file}}}}\ul\f1\fs28\par
+\ulnone\b\f0\lang16393 $ \f1\lang9 wget {\ul{\field{\*\fldinst{HYPERLINK http://domain.com/file }}{\fldrslt{http://domain.com/file}}}}\f1\fs28\par
+\b0\par
+# Display listening tcp and udp ports and corresponding programs\par
+\b\f0\lang16393 $ \f1\lang9 netstat -nutlp\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 9 \endash  ARCHIVES (TAR FILES)\fs28\par
+\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 # Create tar named archive.tar containing directory.\par
+\b\f0\lang16393 $ \f1\lang9 tar cf archive.tar directory\b0\par
+\par
+# Extract the contents from archive.tar.\par
+\b\f0\lang16393 $ \f1\lang9 tar xf archive.tar\b0\par
+\par
+# Create a gzip compressed tar file name archive.tar.gz.\par
+\b\f0\lang16393 $ \f1\lang9 tar czf archive.tar.gz directory\par
+\b0\par
+# Extract a gzip compressed tar file.\par
+\b\f0\lang16393 $ \f1\lang9 tar xzf archive.tar.gz\b0\par
+\par
+# Create a tar file with bzip2 compression\par
+\b\f0\lang16393 $ \f1\lang9 tar cjf archive.tar.bz2 directory\b0\par
+\par
+# Extract a bzip2 compressed tar file.\par
+\b\f0\lang16393 $ \f1\lang9 tar xjf archive.tar.bz2\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 10 \endash  INSTALLING PACKAGES\fs28\par
+\highlight0\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1 # Search for a package by keyword.\par
+\b\f0\lang16393 $ \f1\lang9 yum search keyword\b0\par
+\par
+# Install package.\par
+\b\f0\lang16393 $ \f1\lang9 yum install package\b0\par
+\par
+# Display description and summary information about package.\par
+\b\f0\lang16393 $ \f1\lang9 yum info package\b0\par
+\par
+# Install package from local file named package.rpm\par
+\b\f0\lang16393 $ \f1\lang9 rpm -i package.rpm\b0\par
+\par
+# Remove/uninstall package.\par
+\b\f0\lang16393 $ \f1\lang9 yum remove package\b0\par
+\par
+# Install software from source code.\par
+\b\f0\lang16393 $ \f1\lang9 tar zxvf sourcecode.tar.gz\b0\par
+\b cd sourcecode\par
+./configure\par
+make\par
+make install\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\fs32 11 \endash  SEARCH\fs28\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 # Search for pattern in file\par
+\b\f0\lang16393 $ \f1\lang9 grep pattern file\par
+\b0\par
+# Search recursively for pattern in directory\par
+\b\f0\lang16393 $ \f1\lang9 grep -r pattern directory\b0\par
+\par
+# Find files and directories by name\par
+\b\f0\lang16393 $ \f1\lang9 locate name\b0\par
+\par
+# Find files in /home/john that start with "prefix".\par
+\b\f0\lang16393 $ \f1\lang9 find /home/john -name 'prefix*'\b0\par
+\par
+# Find files larger than 100MB in /home\par
+\b\f0\lang16393 $ \f1\lang9 find /home -size +100M\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 12 \endash  SSH LOGINS\fs28\par
+\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 # Connect to host as your local username.\par
+\b\f0\lang16393 $ \f1\lang9 ssh host\b0\par
+\par
+# Connect to host as user\par
+\b\f0\lang16393 $ \f1\lang9 ssh user@host\b0\par
+\par
+# Connect to host using port\par
+\b\f0\lang16393 $ \f1\lang9 ssh -p port user@host\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 13 \endash  FILE TRANSFERS\fs28\par
+\highlight0\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1 # Secure copy file.txt to the /tmp folder on server\par
+\b\f0\lang16393 $ \f1\lang9 scp file.txt server:/tmp\b0\par
+\par
+# Copy *.html files from server to the local /tmp folder.\par
+\b\f0\lang16393 $ \f1\lang9 scp server:/var/www/*.html /tmp\b0\par
+\par
+# Copy all files and directories recursively from server to the current system's /tmp folder.\par
+\b\f0\lang16393 $ \f1\lang9 scp -r server:/var/www /tmp\b0\par
+\par
+# Synchronize /home to /backups/home\par
+\b\f0\lang16393 $ \f1\lang9 rsync -a /home /backups/\b0\par
+\par
+# Synchronize files/directories between the local and remote system with compression enabled\par
+\b\f0\lang16393 $ \f1\lang9 rsync -avz /home server:/backups/\par
+\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 14 \endash  DISK USAGE\fs28\par
+\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 # Show free and used space on mounted filesystems\par
+\b\f0\lang16393 $ \f1\lang9 df -h\b0\par
+\par
+# Show free and used inodes on mounted filesystems\par
+\b\f0\lang16393 $ \f1\lang9 df -i\b0\par
+\par
+# Display disks partitions sizes and types\par
+\b\f0\lang16393 $ \f1\lang9 fdisk -l\b0\par
+\par
+# Display disk usage for all files and directories in human readable format\par
+\b\f0\lang16393 $ \f1\lang9 du -ah\b0\par
+\par
+# Display total disk usage off the current directory\par
+\b\f0\lang16393 $ \f1\lang9 du -sh\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 15 \endash  DIRECTORY NAVIGATION\fs28\par
+\highlight0\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1 # To go up one level of the directory tree.  (Change into the parent directory.)\par
+\b\f0\lang16393 $ \f1\lang9 cd ..\b0\par
+\par
+# Go to the $HOME directory\par
+\b\f0\lang16393 $ \f1\lang9 cd\b0\par
+\par
+# Change to the /etc directory\par
+\b\f0\lang16393 $ \f1\lang9 cd /etc\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 16 \endash  SECURITY\par
+\fs28\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0\f0\lang16393 # Create user password\par
+\b $ passwd username (once press enter button then its asking password then give any password)\par
+\b0 # To check pasword created or not\par
+\b $ cat shadow\par
+(under user show password created then again type command "su username" switch to user now again type command "sudo su"& press enter and asking to password)\b0\f1\lang9\par
+# Change the current user's password.\par
+\b\f0\lang16393 $ \f1\lang9 passwd\b0\par
+\par
+# Switch to the root account with root's environment. (Login shell.)\par
+\b\f0\lang16393 $ \f1\lang9 sudo -i\b0\par
+\par
+# Execute your current shell as root. (Non-login shell.)\par
+\b\f0\lang16393 $ \f1\lang9 sudo -s\b0\par
+\par
+# List sudo privileges for the current user.\par
+\b\f0\lang16393 $ \f1\lang9 sudo -l\b0\par
+\par
+# Edit the sudoers configuration file.\par
+\b\f0\lang16393 $ \f1\lang9 visudo\b0\par
+\par
+# Display the current SELinux mode.\par
+\b\f0\lang16393 $ \f1\lang9 getenforce\b0\par
+\par
+# Display SELinux details such as the current SELinux mode, the configured mode, and the loaded policy.\par
+\b\f0\lang16393 $ \f1\lang9 sestatus\b0\par
+\par
+# Change the current SELinux mode to Permissive. (Does not survive a reboot.)\par
+\b\f0\lang16393 $ \f1\lang9 setenforce 0\b0\par
+\par
+# Change the current SELinux mode to Enforcing. (Does not survive a reboot.)\par
+\b\f0\lang16393 $ \f1\lang9 setenforce 1\b0\par
+\par
+# Set the SELinux mode to enforcing on boot by using this setting in the /etc/selinux/config file.\par
+\b\f0\lang16393 $ \f1\lang9 SELINUX=enforcing\b0\par
+\par
+# Set the SELinux mode to permissive on boot by using this setting in the /etc/selinux/config file.\par
+\b\f0\lang16393 $ \f1\lang9 SELINUX=permissive\b0\par
+\par
+# Set the SELinux mode to disabled on boot by using this setting in the /etc/selinux/config file.\par
+\b\f0\lang16393 $ \f1\lang9 SELINUX=disabled\b0\par
+
+\pard\sa200\sl276\slmult1\qc\highlight2\ul\b\fs32 17 \endash  LOGGING AND AUDITING\fs28\par
+\par
+
+\pard\sa200\sl276\slmult1\highlight0\ulnone\b0 # Display messages in kernel ring buffer.\par
+\b\f0\lang16393 $ \f1\lang9 dmesg\b0\par
+\par
+# Display logs stored in the systemd journal.\par
+\b\f0\lang16393 $ \f1\lang9 journalctl\b0\par
+\par
+# Display logs for a specific unit (service).\par
+\b\f0\lang16393 $ \f1\lang9 journalctl -u servicename\b0\f0\par
+}
+ 
